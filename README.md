@@ -1,6 +1,6 @@
 # Control Flow in Python
 
-### If, else if - elif, else statements (blocks)
+### If, else if (elif), else statements (blocks)
 
 - If statements check to see if a condition is true and if it is true then carry it will carry out the code within.
   For example in the code below the print statement will be executed if the statement is true.
