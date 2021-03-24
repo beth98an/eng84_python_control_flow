@@ -22,6 +22,57 @@ else:
     print("Oops something went wrong, please try later")
 
 ```
+## Loops
+Loops help to iterate through data.
+- for loops 
+- while loops
 
-### for loops
-### while loops
+### For loops
+- Is used to repeat a series of statements a fixed number of times (iteration).
+- Can also be used to loop through an iterable object like a list.
+- syntax to create a loop
+- for is python keyword variable
+
+- Iterating through items in a list
+```
+shopping_list = ["bread", "eggs", "milk", "orange"]
+
+for items in shopping_list:
+    print(items)
+```
+- Iterating through letters in a word
+```
+for letter in "fruits":
+    print(letter)
+```
+- For loop including an if statement.
+```
+shopping_list = ["bread", "eggs", "milk", "orange"]
+for items in shopping_list:
+    print(items)
+    if items == "milk":  # when the condition is true the loop ends
+        # break is a key word
+        break
+        # at this point when milk is found in the items
+        # iterating through the shopping_list the loop will stop
+```
+break stops the loop 
+
+- Iterating through a dict.
+```
+food_bill = {1: {"name": "James", "bill": "£1"},
+             2: {"name": "Bond", "bill": "£2"},
+             3: {"name": "shah", "bill": "£3"}}
+
+for items in food_bill.keys():
+    print(items)
+
+for items in food_bill.values():
+    print(items)
+```
+
+### While loops
+- Repeatedly executes a statement inside the loop as long as a given condition is true.
+- Can become infinite if a condition is never false.
+
+
