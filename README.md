@@ -23,15 +23,15 @@ else:
 
 ```
 ## Loops
-Loops help to iterate through data.
-- for loops 
-- while loops
+- Loops help to iterate through data.
+- The types of loops are:
+  - for loops 
+  - while loops
 
 ### For loops
 - Is used to repeat a series of statements a fixed number of times (iteration).
 - Can also be used to loop through an iterable object like a list.
-- syntax to create a loop
-- for is python keyword variable
+- syntax: for is python keyword followed by variable then data collection
 
 - Iterating through items in a list
 ```
@@ -56,8 +56,7 @@ for items in shopping_list:
         # at this point when milk is found in the items
         # iterating through the shopping_list the loop will stop
 ```
-break stops the loop 
-
+- Break stops the loop.
 - Iterating through a dict.
 ```
 food_bill = {1: {"name": "James", "bill": "£1"},
@@ -70,32 +69,45 @@ for items in food_bill.keys():
 for items in food_bill.values():
     print(items)
 ```
+- Nested for loops
+  - Used to iterate through the nested dictionaries and lists.
+```
+for items in food_bill.values():
+    # Nested loop to iterate through the nested dictionary to get the value of bill by name
+    for name_bill in items.values():
+        print(name_bill)
+```
+
+- Using a range to loop a certain number of times
+- Syntax: for current_number in range(start, stop, step)
+```
+for i in range(0,5,1):
+    print(i)
+```
 
 ### While loops
 - Repeatedly executes a statement inside the loop as long as a given condition is true.
 - Can become infinite if a condition is never false.
+- Syntax: while - condition - value
+- Used in cases where the number of iterations is uncertain or when unable to use a for loop.
 
-- what
-- where
-- use cases
 ```
-# syntax while - condition  - value
-
 num = 0
 while num < 10:  # while true continue ,if false stop
     print(f"it's working -> {num}")
     num += 1
-
-# second iteration
+```
+- While loop example with If statements
+```
 num = 0
 while num < 10:  # while true continue ,if false stop
     print(f"it's working -> {num}")
     if num == 4:  # if true the loop ends
         break
     num += 1
-
-# Use case as the 3rd Iteration
-
+```
+- Use case for the while loop
+```
 age = input("please enter your age")
 print(f"your age is {age}")
 
@@ -108,7 +120,7 @@ while user_prompt:
         print("please enter your age in digits")
 print(f"your age is {age}")  # this ine of code only gets executed
 # if the user enters age in digits
-
-# ensure the loop conditions are in your control to avoid going into the infinite loop
 ```
+- else can be used to run some code when the condition is no longer true.
+- ensure the loop conditions are in your control to avoid going into the infinite loop.
 
